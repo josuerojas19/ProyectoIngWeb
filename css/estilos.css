@@ -1,0 +1,133 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #D3E7EE;
+	color: #000;
+	font-family: sans-serif;
+}
+.contenedor{
+	width: 90%;
+	max-width: 1024px;
+	margin: 20px auto;
+
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns:  repeat(3, 1fr);
+	grid-template-rows:  repeat(9, auto);
+
+	grid-template-areas: "header header header"
+					      "nav nav nav"
+					      "galeria galeria  sidebar"
+						  "contenido contenido  contenido"
+						  "contenido1 contenido1  contenido1"
+						  "contenido2 contenido2  contenido2"
+						  "contenido3 contenido3 contenido3"
+						  "contenido4 contenido4 contenido4"
+						  "sponsor sponsor sponsor"
+					      "footer footer footer";
+}
+.contenedor > section, 
+.contenedor .cabecera,
+.contenedor .menuPrincipal, 
+.contenedor .contenido,
+.contenedor .contenido1,
+.contenedor .contenido2,
+.contenedor .contenido3,
+.contenedor.contenido4,   
+.contenedor .sponsor,  
+.contenedor .footer{
+	background: #fff;
+	padding: 30px;
+	border-radius: 4px;
+}
+
+.contenedor .cabecera {
+	background: #FFFFFF;
+	color: #2E3A59;
+	grid-area: header;
+}
+.contenedor .menuPrincipal {
+	background: #FFFFFF;
+	color: #2E3A59;
+	grid-area: nav;
+}
+
+.contenedor .contenido{
+	grid-area: contenido;
+	background: #333;
+	color: #fff;
+	padding: 150px;
+}
+
+.contenedor .contenido1{
+	grid-area: contenido1;
+	background: #7097A8;
+	color: #fff;
+	padding: 70px;
+}
+
+.contenedor .contenido2{
+	grid-area: contenido2;
+	background: #7097A8;
+	color: #fff;
+	padding: 70px;
+}
+.contenedor .contenido3{
+	grid-area: contenido3;
+	background: #7097A8;
+	color: #fff;
+	padding: 70px;
+}
+.contenedor .contenido4{
+	grid-area: contenido4;
+	background: #7097A8;
+	color: #fff;
+	padding: 70px;
+}
+.contenedor .sponsor{
+	grid-area: sponsor;
+	background: #EED7A3;
+	color: #2E3A59;
+	padding: 20px;
+}
+.contenedor .sidebar{
+	grid-column: 3 /  4;
+	background: #333;
+	grid-area: sidebar;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+
+
+.contenedor .footer{
+	background: #EED7A3;
+	color: #2E3A59;
+	grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor{
+		grid-template-areas: "header header header"
+				      "nav nav nav"
+				      "contenido contenido  contenido"
+				      "sidebar sidebar  sidebar"
+				      "noticia1 noticia2 noticia2"
+				      "footer footer footer";
+	}
+}
+
+@media screen and (max-width: 568px){
+	.contenedor{
+		grid-template-areas: "header header header"
+				      "nav nav nav"
+				      "contenido contenido  contenido"
+				      "sidebar sidebar  sidebar"
+				      "noticia1 noticia1 noticia1"
+				      "noticia2 noticia2 noticia2"
+				      "footer footer footer";
+	}
+}
